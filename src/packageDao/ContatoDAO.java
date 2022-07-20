@@ -22,6 +22,8 @@ public class ContatoDAO {
             statement.setDate(3, new java.sql.Date(contato.getRegister_date().getTime()));
             // executar o comando SQL
             statement.execute();
+            
+            System.out.println("Contato inserido com sucesso!");
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {

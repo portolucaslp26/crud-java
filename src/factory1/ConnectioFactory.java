@@ -18,7 +18,7 @@ public class ConnectioFactory {
     // conexao com o banco de dados
     private static java.sql.Connection connectionToMySQL() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             return java.sql.DriverManager.getConnection(CONNECTION_URL, USERNAME, PASSWORD);
         } catch (Exception e) {
             throw new RuntimeException(e);
